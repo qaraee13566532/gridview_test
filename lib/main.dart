@@ -66,7 +66,10 @@ class _MyHomePageState extends State<MyHomePage> {
           SizedBox(
             width: 12.0,
           ),
-          Text("Index Number:$index pushed...",style: TextStyle(fontSize: 18,fontWeight: FontWeight.bold),),
+          Text(
+            "Key Number : $index pushed...",
+            style: TextStyle(fontSize: 16, fontWeight: FontWeight.normal),
+          ),
         ],
       ),
     );
@@ -100,6 +103,12 @@ class _MyHomePageState extends State<MyHomePage> {
     print('index = $index');
   }
 
+  final elvShaped = ElevatedButton.styleFrom(
+    shape: RoundedRectangleBorder(
+      borderRadius: BorderRadius.circular(25.0),
+    ),
+  );
+
   @override
   void initState() {
     super.initState();
@@ -132,6 +141,7 @@ class _MyHomePageState extends State<MyHomePage> {
             return Padding(
               padding: const EdgeInsets.all(8.0),
               child: ElevatedButton(
+                style: elvShaped,
                   child: Text(
                     index.toString(),
                     style: TextStyle(fontSize: 29),
